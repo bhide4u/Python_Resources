@@ -1,0 +1,108 @@
+commenting - 
+single line, multi line
+
+variables - 
+
+variable declaration rules - 
+1. Descriptive names, easy to read
+2. Avoid reserved keywords as variable names
+3. Use lowercase letters, separate words by underscore, snake_case
+4. Declare variables close to where they are used.
+5. Define constants in all capital letters
+6. Don't reuse variables in same block of code
+7. Avoid using global variables unless absolutely necessary
+8. use variable type annotations eg. - num_students: int = 20
+
+Special variables / Magic variables
+1. _ Used as a placeholder for variables that are not used in the code
+2. __ Used for name mangling in Python classes (Name mangling is a technique that makes a variable or method private to a class)
+3. __init__  Double underscore on both sides - Used for special methods or attributes in Python
+
+Variable assignments - 
+
+1. Multiple values to multiple variables
+a, b, c = 1, 2, 3
+
+2. One value to multiple variables
+a = b = c = "apple"
+
+Unpacking collection - 
+a, b, c = [1, 2, 3]
+
+Variable Scoping - 
+1. Global 
+- defined outside of any function or class definition
+- can be accessed from anywhere in your code
+- to modify a global variable from within a function, you need to use the global keyword (not recommended)
+
+2. Local 
+- Defined within a function or class definition
+- they can only be accessed from within that function or class
+
+
+Data structure vs Data Type - 
+
+Data Type - 
+- A data type is a classification of data that determines the type of operations that can be performed on it
+- integers, floats, strings, and booleans
+- Each data type has its own set of operations that can be performed on it
+
+Data Structures -
+- a way of organizing and storing data in a computer so that it can be accessed and used efficiently
+- builtin data structures - lists, tuples, dictionaries, and sets
+- Each data structure has its own set of methods and operations that can be performed on it
+- eg -  append() method on lists , keys() method on dictionaries
+
+Data types in Python - 
+
+1. Numeric Types - int, float, complex
+2. Text Type - str
+3. Sequence Types - list, tuple, range
+4. Mapping Type - dict
+5. Set Types - set, frozenset
+6. Boolean Type - bool
+7. Binary Types - bytes, bytearray, memoryview
+8. None Type - None
+
+Specialized Data types in Python - 
+1. lists
+
+2. strings
+- '' or ""
+- display using print()
+- Multiline Strings - ''' or """
+- strings are arrays
+- square brackets to access elements of string [] (first character has index 0)
+- string concatenation - + 
+- formatted strings - f"{}" , {pi:.2f}, "{}".format() , can specify {:.2f} in .format() 
+
+- escape sequences - \n, \t, \', \", \\, 
+
+Operators
+1. Arithmetic - addition, subtraction, multiplication, division, modulo, floor division, exponentiation
+- Operator Precedence - the order in which operations are evaluated in an expression
+
+2. Assignment - addition and assignment, subtraction and assignment, multiplication and assignment, division and assignment, modulo and assignment
+
+3. Comparison - equal to, not equal to, greater than, less than, greater than equal to, less than equal to
+
+4. Logical operators - AND, OR, NOT
+
+Expression vs Statement -  
+Expression - piece of code that produces a value
+Statement - complete unit of execution that performs an action
+Statement (cannot be part of an expression) <= Expression (Can be part of a statement or stand alone)
+
+Type conversion 
+int()
+float()
+string()
+
+must know functions - 
+1. print()
+2. type(variable)
+
+Builtin modules
+1. random - radint, radrange (methods)
+2. Math - abs, round, pow, sqrt, floor, ceil, min, max, sum, log
+
