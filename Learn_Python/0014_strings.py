@@ -52,3 +52,34 @@ message = "My name is {}, and I am {} years old. I work as a {}.".format(name, a
 print(message)
 
 # String Indexes
+# String indexing is the process of accessing individual characters in a string by their position or index.
+# String indexing starts from 0
+
+message = "Hello, World!"
+
+print(message[0])   # Output: "H"
+print(message[4])   # Output: "o"
+print(message[-1])  # Output: "!"
+
+# String Slicing
+# string[ start : end : step ]
+# start - the index of the first character to include, 
+# end - the index of the last character to include (exclusive)
+# step - is the step size (default is 1)
+
+# Immutability - Strings in python are immutable
+# In Python, strings are immutable, which means that once a string is created, you cannot change its contents. Any attempt to modify a string will result in the creation of a new string object.
+
+# Here's an example to demonstrate this:
+greeting = "Hello, World!"
+greeting[7] = "F"
+print(greeting)
+
+# To modify a string, you need to create a new string that includes the changes you want to make. For example:
+
+greeting = "Hello, World!"
+new_greeting = greeting[:7] + "F" + greeting[8:]
+print(new_greeting)
+
+
+

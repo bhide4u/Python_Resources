@@ -66,6 +66,29 @@ Data types in Python -
 
 Specialized Data types in Python - 
 1. lists
+- collection of items that can be of any data type
+- ordered
+- mutable
+- created using square brackets [ ] and commas (,) are used to separate values
+
+- List indexing starts from 0
+- List slicing - List[ start : end : step ]
+- start - the index of the first character to include, 
+- end - the index of the last character to include (exclusive)
+- step - is the step size (default is 1)
+
+- Matrix
+- multi dimensional lists
+- can access individual elements of a multi-dimensional list using two indices - matrix[1][2]
+
+- list methods - append, copy [shallow copying], clear, count, extend, index, insert, pop, remove, reverse, sort
+
+- list unpacking
+- a, b, *c = [1, 2, 3, 4, 5]
+- can be used to swap variables
+    a = 1
+    b = 2
+    a, b = b, a
 
 2. strings
 - '' or ""
@@ -74,7 +97,72 @@ Specialized Data types in Python -
 - strings are arrays
 - square brackets to access elements of string [] (first character has index 0)
 - string concatenation - + 
-- formatted strings - f"{}" , {pi:.2f}, "{}".format() , can specify {:.2f} in .format() 
+- formatted strings - f"{}" , {pi:.2f}, "{}".format() , can specify {:.2f} in .format()
+
+- String indexing starts from 0
+- String slicing - string[ start : end : step ]
+- start - the index of the first character to include, 
+- end - the index of the last character to include (exclusive)
+- step - is the step size (default is 1)
+
+- Strings are immutable
+
+- String methods 
+- capitalize, count, endswith, find, index, join, lower, lstrip, replace, rstrip, split, startswith, strip title , upper
+
+3. Booleans
+- True, False
+- Used in conditional statements to represent logical values
+
+4. None
+- represents the absence of a value
+- used to indicate that a variable or function argument does not have a meaningful value
+- function call has no return value
+- used as the default return value for functions that do not explicitly return anything
+
+5. Dictionaries
+- collection of key-value pairs
+- each key is associated with a value
+- my_dict['name'] --> name is the key and value respective of name is accessed using this method
+- my_dict['email'] = 'john@example.com' --> new key value pair can be added 
+- del my_dict['gender'] --> del keyword to delete key value pair
+- nested dictionaries
+- Properties of dictionary keys -  
+    - unique (If you try to assign a value to a key that already exists in the dictionary, the new value will overwrite the existing value)
+    - Immutable - Dictionary keys must be immutable, Mutable data types like lists cannot be used as dictionary keys
+    - Hashable - Since dictionaries are implemented using a hash table, keys must be hashable. This means that the hash value of a key must remain constant throughout the lifetime of the dictionary. Immutable data types like strings and numbers are hashable, while mutable data types like lists and dictionaries are not
+    - dictionary keys are case-sensitive
+
+- dictionary methods - clear, copy, fromkeys, get, items, keys, pop, popitem, update, values
+
+6. Tuples
+- collection of ordered and immutable elements
+- enclosed in parentheses
+- tuple with a single element is that you must include a comma after the element
+- indexing can be used to access tuple
+- slicing can also be used to extract a subset of its elements
+- can concatenate tuples using the + operator, which creates a new tuple containing the elements of both tuples
+- tuple unpacking 
+- commonly used for returning multiple values from a function, as they can be unpacked to separate variables
+- used to create a collection of elements that should not be modified
+- to represent an ordered collection of items where the order should not be changed
+
+- Tuple methods - count, index
+
+7. Sets
+- an unordered collection of unique elements
+- useful when you need to perform operations such as intersection, union, and difference on collections of data
+- test using membership operator
+    my_set = {1, 2, 3}
+    print(2 in my_set) 	# Output: True
+    print(4 in my_set) 	# Output: False
+
+- set methods - add, clear, copy, difference, difference_update, discard, intersection, intersection_update, isdisjoint, issubset, issuperset, pop, remove, symmetric_difference, symmetric_difference_update, union, update
+
+- Python keywords - and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield
+
+
+
 
 - escape sequences - \n, \t, \', \", \\, 
 
@@ -88,19 +176,29 @@ Operators
 
 4. Logical operators - AND, OR, NOT
 
+in keyword - 
+membership operator
+
 Expression vs Statement -  
 Expression - piece of code that produces a value
 Statement - complete unit of execution that performs an action
 Statement (cannot be part of an expression) <= Expression (Can be part of a statement or stand alone)
 
+
 Type conversion 
 int()
 float()
 string()
+list()
+tuple([])
+set()
 
 must know functions - 
 1. print()
 2. type(variable)
+3. len() --> [len() vs .count()]
+4. sorted() --> [sorted() vs .sort()]
+5. range() --> [range(start, stop, step)]
 
 Builtin modules
 1. random - radint, radrange (methods)
