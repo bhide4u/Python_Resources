@@ -19,10 +19,10 @@ new_set.clear()
 print(new_set)
 print(my_set)
 
+# difference()
 set1 = {1, 2, 3}
 set2 = {2, 3, 4}
 
-# difference()
 difference = set1.difference(set2)
 print(difference)
 
@@ -123,3 +123,7 @@ set3 = {5, 6, 7}
 set1.update(set2, set3)
 print(set1)
 
+
+# The difference between discard() and remove() is that discard() 
+# does not raise an error when the specified element is not found, 
+# while remove() raises a KeyError in such cases

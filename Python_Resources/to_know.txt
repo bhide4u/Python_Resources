@@ -158,11 +158,9 @@ Specialized Data types in Python -
     print(4 in my_set) 	# Output: False
 
 - set methods - add, clear, copy, difference, difference_update, discard, intersection, intersection_update, isdisjoint, issubset, issuperset, pop, remove, symmetric_difference, symmetric_difference_update, union, update
+- difference between discard() and remove() methods --> remove raises key error if element to remove is not found.
 
 - Python keywords - and, as, assert, break, class, continue, def, del, elif, else, except, False, finally, for, from, global, if, import, in, is, lambda, None, nonlocal, not, or, pass, raise, return, True, try, while, with, yield
-
-
-
 
 - escape sequences - \n, \t, \', \", \\, 
 
@@ -175,6 +173,13 @@ Operators
 3. Comparison - equal to, not equal to, greater than, less than, greater than equal to, less than equal to
 
 4. Logical operators - AND, OR, NOT
+
+- walrus operator (assignment expressions)
+    - walrus operator has some limitations and considerations
+        - The walrus operator can only be used within an expression, not as a standalone statement
+        - The scope of the assigned variable is limited to the current block or expression where the walrus operator is used
+        - It's important to use the walrus operator judiciously to maintain code readability. Overuse or excessive nesting can lead to code that is harder to understand
+    - The walrus operator provides a concise and expressive way to assign values within expressions, reducing the need for separate assignment statements and improving code readability in certain situations
 
 in keyword - 
 membership operator
@@ -192,6 +197,7 @@ string()
 list()
 tuple([])
 set()
+bool()
 
 must know functions - 
 1. print()
@@ -199,8 +205,131 @@ must know functions -
 3. len() --> [len() vs .count()]
 4. sorted() --> [sorted() vs .sort()]
 5. range() --> [range(start, stop, step)]
+6. help()
 
 Builtin modules
 1. random - radint, radrange (methods)
 2. Math - abs, round, pow, sqrt, floor, ceil, min, max, sum, log
 
+Conditional Logic - 
+- if - elif - else
+- nested if statements
+
+- ternary operator 
+    - 
+
+Loops - 
+- loop is used to iterate over a sequence of elements
+- for loop - iterating over sequences, iterate over the keys or values in a dictionary using the items() method
+- while loop - while - else
+
+- break, continue, pass
+
+Iterables -
+- iterable is any object that can be looped over using a for loop
+- object that has an __iter__() method that returns an iterator object
+- object that has a __next__() method that returns the next item in the sequence, and raises a StopIteration exception when there are no more items to return
+- Builtin - lists, tuples, dictionaries, sets, strings
+- Builtin - 
+    - range()
+        - range(start, stop, step) 
+    - enumerate() 
+        - contains pairs of the form (index, value) for each item in the iterable
+        - useful when you want to keep track of the index of each item in an iterable object
+        - can save you from writing a separate counter variable and incrementing it manually
+        - enumerate(iterable, start=0)
+        
+- can also create your own iterable objects by defining a class with an __iter__() method that returns an iterator object
+
+functions - 
+- block of reusable code that performs a specific task
+- allow you to break your program down into smaller, more manageable pieces, making your code easier to read, write, and maintain
+- optional and required arguments
+- can return multiple values
+- conventions - 
+    - Should do one thing really well
+    - And function should return something
+- arguments vs parameters 
+    - Parameters - while defining a function, values that a function expects to receive when it is called.
+        - default parameters
+    - Arguments -
+        - Actual values passed to a function when it is called
+        - They correspond to the parameters defined in the function declaration
+        - keyword arguments
+        - positional arguments
+- return keyword
+- nested functions
+- methods vs functions
+    - function 
+        - block of code that is designed to perform a specific task
+        - standalone blocks of code
+        - called by their name 
+        - can only access their own arguments and local variables
+    - method 
+        - a function that is associated with an object
+        - methods are functions that are defined within a class 
+        - called on an object using the dot notation 
+        - can access and manipulate the object's data
+- docstrings (Documentation Strings)
+    - a string literal used to provide documentation and descriptions for modules, classes, functions, and methods
+    - serves as a way to document the purpose, behavior, parameters, and return values of a piece of code
+    - ''' or """
+    - placed immediately after the definition of a module, class, function, or method
+    - docstrings can be automatically extracted to generate documentation in various formats, such as HTML or PDF, using tools like Sphinx
+    - To access a docstring, you can use the `help()` function or access the `__doc__` attribute of an object
+
+- magic methods or dunder methods (double underscore)
+- args and kwargs
+    - `*args` and `**kwargs` are special syntaxes used in function definitions to handle a varying number of arguments
+    - You can use both `*args` and `**kwargs` together in a function definition if you want to accept both positional and keyword arguments
+    - Rule of arguments - actual params, *args, default parameters, **kwargs
+    - args
+        - used to pass a variable number of non-keyword arguments to a function
+        - The `*args` parameter allows you to pass multiple positional arguments, which are then captured as a tuple inside the function
+        - The name `args` is arbitrary and can be replaced with any valid variable name, but the asterisk (`*`) is necessary to indicate that it is a special parameter
+        - Inside the function, we can iterate over `args` and print each argument
+    - kwargs 
+        - `**kwargs` is used to pass a variable number of keyword arguments to a function
+        - The `**kwargs` parameter allows you to pass multiple keyword arguments, which are then captured as a dictionary inside the function
+        - Similar to `*args`, the name `kwargs` is arbitrary, but the double asterisks (`**`) are necessary to indicate that it is a special parameter
+        - Inside the function, we can iterate over `kwargs` using the `items()` method and print each key-value pair
+
+    
+
+Python Indentation 
+
+Truthy vs Falsey 
+
+Ternary operator 
+- syntax 
+(output) if (condition is True) else (output - if condition is false)
+
+Misc - 
+- Why print('a'>'A') evaluates to True 
+    - performed based on their lexicographic order
+    - Since 'a' comes after 'A' in the ASCII table
+
+- What will be the output of print(1<2>3<4<5) in python and why?
+    - False
+    - comparison operators in Python, such as < and >, have left-to-right associativity
+    - the expression is evaluated from left to right, and the comparison operations are evaluated in pairs
+
+- is vs ==
+    - == operator is used to compare the values of two objects - checks whether the two objects have the same value or not
+    - 'is' operator is used to compare the identity of two objects - checks whether the two objects refer to the same memory location or not
+
+clean coding 
+DRY principle
+
+Scope
+    - scoping defines the visibility and accessibility of variables and names within a program
+    - The scope rules in Python follow the LEGB rule
+    - Local , Enclosing, Global , Built-in
+    - scoping is important because -
+        - Avoiding Naming Conflicts
+        - Encapsulation and Modularity
+        - Code Reusability
+        - Variable Lifetime
+    - nonlocal keyword
+
+Dependency injection
