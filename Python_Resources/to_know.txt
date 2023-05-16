@@ -216,7 +216,10 @@ Conditional Logic -
 - nested if statements
 
 - ternary operator 
-    - 
+    - shorthand way of writing an `if` statement in Python
+    - allows you to write a concise one-liner code that evaluates an expression and returns one of two values based on whether the expression is true or false
+    - syntax of the ternary operator
+        - `value_if_true if condition else value_if_false`
 
 Loops - 
 - loop is used to iterate over a sequence of elements
