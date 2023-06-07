@@ -2,12 +2,12 @@
 # 1. Object-Oriented Programming (OOP) is a programming paradigm that organizes code into objects, which are instances of classes. 
 # It focuses on representing real-world entities as objects that have 
 # 1. attributes (data) and 
-# 2. behaviors (methods). 
+# 2. methods (behaviors). 
 
 # OOP promotes modularity, reusability, and encapsulation, allowing developers to create complex systems by building and interacting with objects.
 
 # In Python, like many other programming languages, OOP is supported. 
-# It provides features such as classes, objects, inheritance, polymorphism, and encapsulation. 
+# It provides features such as classes, objects, inheritance, polymorphism, and encapsulation, abstraction. 
 # Classes define the blueprint for creating objects, while objects are instances of a class that can store data and perform actions through methods. 
 # OOP allows for the organization and management of code in a structured and efficient manner.
 
@@ -15,14 +15,15 @@
 # It means that every entity in Python, including numbers, strings, functions, modules, and even classes themselves, is an object. 
 # An object is an instance of a class, and Python treats them uniformly. This is in contrast to some other languages where primitive types (like integers or booleans) are treated differently from objects.
 
-# Being an object means that these entities in Python have attributes (properties) and methods associated with them. 
+# Being an object means that these entities in Python have attributes (properties) and methods (behaviors) associated with them. 
 # For example, a string object can have attributes like its length, and it can have methods like `upper()` or `split()`. 
 # Functions can be assigned to variables, passed as arguments, and even have attributes. 
 # This object-oriented nature of Python allows for greater flexibility and enables powerful programming techniques.
 
 # 1. Class: In Python, a class is a blueprint or template that defines the structure and behavior of objects. It serves as a blueprint for creating objects, which are instances of the class. A class encapsulates data (attributes) and functions (methods) that operate on that data. It defines the characteristics and behavior that objects of that class will have.
 
-# To create a class in Python, you use the `class` keyword followed by the class name. Inside a class, you can define attributes and methods that describe the properties and actions of objects created from that class. 
+# To create a class in Python, you use the `class` keyword followed by the class name. 
+# Inside a class, you can define attributes and methods that describe the properties and actions of objects created from that class. 
 
 # Here's an example of a simple class definition:
 
