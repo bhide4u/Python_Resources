@@ -138,3 +138,49 @@ for value in gen:
 # The key idea behind using 'yield' is that it allows the generator function to generate values on-the-fly, rather than generating and storing all values in memory at once. This makes generators memory-efficient, especially when dealing with large or infinite sequences of values.
 
 # The 'yield' keyword provides a powerful mechanism for implementing iterators and generators in Python, enabling the generation of values in a lazy and efficient manner.
+
+
+# Define a class named MyGen
+class MyGen:
+    current = 0
+
+    def __init__(self, first, second):
+        self.first = first
+        self.second = second
+
+    # Define the __iter__ method to make the class iterable
+    def __iter__(self):
+        return self
+
+    # Define the __next__ method to generate the next value
+    def __next__(self):
+        if MyGen.current < self.second:
+            num = MyGen.current
+            MyGen.current += 1
+            return num
+        # Raise StopIteration when the range is exhausted
+        raise StopIteration
+
+
+# Create an instance of MyGen with a range from 0 to 100
+gen = MyGen(0, 100)
+
+# Iterate over the generator object
+for i in gen:
+    print(i)
+
+
+# Explanation:
+# 1. The 'MyGen' class is defined with a class-level variable 'current' initialized to 0. This variable will keep track of the current value being generated.
+
+# 2. The '__init__' method is defined to initialize the 'first' and 'second' attributes of the class. These represent the start and end values of the range.
+
+# 3. The '__iter__' method is defined to make the class iterable. It simply returns 'self' since the class itself acts as an iterator.
+
+# 4. The '__next__' method is defined to generate the next value in the range. It checks if the current value ('MyGen.current') is less than the 'second' attribute. If so, it assigns the current value to 'num', increments 'MyGen.current' by 1, and returns 'num'. If the condition is not met, indicating the range is exhausted, a 'StopIteration' exception is raised.
+
+# 5. An instance of the 'MyGen' class is created with a range from 0 to 100, stored in the 'gen' variable.
+
+# 6. The 'for' loop iterates over the 'gen' object. In each iteration, the '__next__' method is called implicitly, and the generated value is printed.
+
+# The output of the code will be a sequence of numbers from 0 to 99, as the range specified is from 0 to 100 (excluding 100).
